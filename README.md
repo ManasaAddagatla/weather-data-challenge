@@ -92,7 +92,7 @@ It creates the database in the PostgreSQL server if it does not exist, and creat
 
 	python src/ingest_data.py
 
-It should ingest data from wx_data into your database, which takes approximately 1 hour to run locally. It handles ingestion of duplicates, and also produces log output in a log file: ingestion.log.
+It should ingest data from wx_data into your database, which takes approximately 1 hour to run locally for entire data. It handles ingestion of duplicates, and also produces log output in a log file: ingestion.log.
 
 ##### Run the weather_statistics.py file:
 
@@ -145,7 +145,7 @@ station_id (optional): Filter by weather station ID.
 ## Testing
 To run tests, run the unit_test.py:
 
-	python unit_tests.py
+	python src/unit_tests.py
 
 ## Swagger UI
 To interact with the API via a web interface, you can use the Swagger UI. Once the application is running, navigate to http://127.0.0.1:5000/ in your browser to access the Swagger documentation and try out the endpoints.
