@@ -3,5 +3,4 @@ pandas
 sqlalchemy
 flask
 flask_restx
-logging
 pytest
