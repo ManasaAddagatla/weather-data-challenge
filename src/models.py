@@ -36,7 +36,7 @@ config_path = os.path.join(script_dir, '..', 'config', 'config.ini')
 config = configparser.ConfigParser()
 config.read(config_path)
 
-# Database name
+# Set database name
 DB_NAME = config['database']['database']
 
 def create_database():
