@@ -12,8 +12,10 @@ Dependencies:
     - sqlalchemy
 """
 
+import os
 import logging
 import psycopg2
+import configparser
 from psycopg2 import sql
 from sqlalchemy import UniqueConstraint, Column, Integer, String, Float, Date
 from sqlalchemy.orm import declarative_base
@@ -24,8 +26,18 @@ from connect_database import engine
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Define the path to the config file
+config_path = os.path.join(script_dir, '..', 'config', 'config.ini')
+
+# Initialize and read the configuration
+config = configparser.ConfigParser()
+config.read(config_path)
+
 # Database name
-DB_NAME = 'weather_db'
+DB_NAME = config['database']['database']
 
 def create_database():
     """
