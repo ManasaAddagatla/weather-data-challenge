@@ -19,7 +19,7 @@ import configparser
 from psycopg2 import sql
 from sqlalchemy import UniqueConstraint, Column, Integer, String, Float, Date
 from sqlalchemy.orm import declarative_base
-# Importing the database engine from database.py
+# Importing the database engine from connect_database.py
 from connect_database import engine 
 
 # Configure logging
